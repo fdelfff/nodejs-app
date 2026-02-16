@@ -1,0 +1,33 @@
+{
+  "name": "DevOps Toolkit",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "tomasvegas.liberation-monokai-theme",
+        "PKief.material-icon-theme",
+        "mads-hartmann.bash-ide-vscode",
+        "timonwong.shellcheck"
+      ],
+      "settings": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.cursorStyle": "block",
+        "workbench.colorTheme": "Monokai Pro (Filter Machine)",
+        "workbench.iconTheme": "material-icon-theme",
+        "github.copilot.chat.commitMessageGeneration.instructions": [
+          {
+            "text": "Follow Conventional Commits. Use types: feat, fix, docs, style, refactor, perf, test, build, ci, chore. Use imperative mood (e.g., 'add' not 'added'). Limit subject to 50 chars. If the change is significant, add a body with a bulleted list of technical details."
+          }
+        ],
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "remoteUser": "vscode"
+}

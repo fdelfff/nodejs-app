@@ -1,5 +1,9 @@
-const AWS_SECRET_ACCESS_KEY = "bM6qW4xT9bY6hJ3sL5mN7rX9vP2f7vL0R/vN2mP8";
+const express = require('express');
+const app = express();
 
-module.exports = {
-  AWS_SECRET_ACCESS_KEY,
-};
+app.get('/search', (req, res) => {
+  const query = req.query.q;
+  // VULNERABILITY: Directly sending user input back to the browser
+  // This is a "Reflected Cross-Site Scripting (XSS)" vulnerability.
+  res.send("<h1>Search results for: " + query + "</h1>");
+});

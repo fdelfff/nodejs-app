@@ -1,4 +1,4 @@
-const AWS_SECRET_ACCESS_KEY = "this-is-a-fake-token";
+const AWS_SECRET_ACCESS_KEY = "bM6qW4xT9bY6hJ3sL5mN7rX9vP2f7vL0R/vN2mP8";
 
 module.exports = {
   AWS_SECRET_ACCESS_KEY,
